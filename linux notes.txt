@@ -1,0 +1,45 @@
+Module 5
+File editors
+
+ed
+ex
+emacs
+pico
+vim
+
+
+vi------|supplies commands for inserting, deleting, replacing, cutting & pasting text, moving around a file, finding & substituting strings.
+The common keys.....i-insert
+                    esc- to escape out of mode
+                    r- replace
+                    d- delete the entire line
+                    x- delete 1 character at a time
+                    u- undo
+                    o- create new line, with insert mode
+                    :q! - quit without saving or shift+Z+Z
+                    :wq! - quit & save
+
+sed command ---|acts as a substitute
+               |replaces a string in a file with a new string
+               |find and delete a line
+               |remove empty lines
+               
+               
+               
+               
+User Account management
+commands-----> useradd
+           --> groupadd
+           --> userdel
+           --> groupdel
+           --> usermod
+           
+           
+           
+           
+system utility commands --->date
+                        --->uptime
+                        --->hostname
+                        --->uname
+                        --->which
+                        --->cal
