@@ -1,0 +1,108 @@
+#!/bin/bash
+
+# Function to validate Component Name input
+validate_component() {
+    local valid_components=("INGESTOR" "JOINER" "WRANGLER" "VALIDATOR")
+    local component
+
+    select component in "${valid_components[@]}"
+    do
+        if [[ -n $component ]]; then
+            echo "$component"
+            return
+        else
+            echo "Invalid input. Please select from the provided options."
+        fi
+    done
+}
+
+# Function to validate Scale input
+validate_scale() {
+    local valid_scales=("MID" "HIGH" "LOW")
+    local scale
+
+    select scale in "${valid_scales[@]}"
+    do
+        if [[ -n $scale ]]; then
+            echo "$scale"
+            return
+        else
+            echo "Invalid input. Please select from the provided options."
+        fi
+    done
+}
+
+# Function to validate View input
+validate_view() {
+    local valid_views=("Auction" "Bid")
+    local view
+
+    select view in "${valid_views[@]}"
+    do
+        if [[ -n $view ]]; then
+            echo "$view"
+            return
+        else
+            echo "Invalid input. Please select from the provided options."
+        fi
+    done
+}
+
+# Function to validate Count input
+validate_count() {
+    local count
+
+    read -p "Enter Count (single digit number): " count
+
+    if [[ "$count" =~ ^[1-9]$ ]]; then
+        echo "$count"
+    else
+        echo "Invalid input. Please enter a single digit number."
+        validate_count
+    fi
+}
+
+# Main script
+
+echo
+
+echo "Enter Component Name:"
+component_name=$(validate_component)
+echo
+
+echo "Enter Scale:"
+scale=$(validate_scale)
+echo
+
+echo "Enter View:"
+view=$(validate_view)
+echo
+
+echo "Enter Count:"
+count=$(validate_count)
+echo
+
+
+# Debugging: Print variable values
+echo "Component Name: $component_name"
+echo "Scale: $scale"
+echo "View: $view"
+echo "Count: $count"
+
+# Debugging: Print the problematic command
+echo " $component_name; $scale; $view; $count"  > sig.conf
+
+echo "Value updated in sig.conf"
+
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                                                                                                                                                                                                                                                                                                                                                                                                                                
+~                                   
